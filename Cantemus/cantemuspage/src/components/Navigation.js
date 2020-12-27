@@ -1,12 +1,13 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import './Navigation.css';
 
 export default class Navigation extends React.Component {
   render() {
     const navigationComponents = this.props.routes.map(r => <Nav.Link href={r.path}>{r.name}</Nav.Link>);
     return (
-      <Navbar expand="lg">
+      <Navbar expand="lg" fixed="top" bg="dark" variant="light">
         <Navbar.Brand href="/">
           Cantemus
         </Navbar.Brand>
