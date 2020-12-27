@@ -13,8 +13,9 @@ export default class Home extends React.Component {
         <p align="center">
           Über die Navigationsleiste im oberen Teil der Homepage können Sie die verschiedenen Informationen unserer Homepage abrufen.
           <br /><br />
-          Hinter der Rubrik <a href="quart.htm" target="main">Quartett</a> verbirgt sich eine kleine Beschreibung von uns und unserem Gesangsquartett.<br />
-          Unter der Rubrik <a href="prog.htm" target="main">Repertoire</a> finden Sie eine kurze Zusammenfassung unseres musikalischen Angebotes, sowie einige Hörbeispiele.<br />
+          Hinter der Rubrik <a href="/quartett">Quartett</a> verbirgt sich eine kleine Beschreibung von uns und unserem Gesangsquartett.
+          <br />
+          Unter der Rubrik <a href="/repertoire">Repertoire</a> finden Sie eine kurze Zusammenfassung unseres musikalischen Angebotes, sowie einige Hörbeispiele.
         </p>
       </div>
     );
