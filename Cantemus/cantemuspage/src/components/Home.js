@@ -1,6 +1,5 @@
-import '../images/images.css';
 import React from 'react';
-import logo from '../images/logo.jpg';
+import Logo from './Logo.js';
 
 export default class Home extends React.Component {
   render() {
@@ -8,7 +7,7 @@ export default class Home extends React.Component {
       <div className="Home">
         <h1 align="center">Herzlich Willkommen bei</h1>
         <p align="center">
-          <img src={logo} class="borderedimage" alt="Cantemus" />
+          <Logo />
         </p>
         <br /><br /><br />
         <p align="center">

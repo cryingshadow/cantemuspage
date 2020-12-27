@@ -1,6 +1,5 @@
-import '../images/images.css';
 import React from 'react';
-import logo from '../images/logo.jpg';
+import Logo from './Logo.js';
 
 export default class Impressum extends React.Component {
   render() {
@@ -19,7 +18,7 @@ export default class Impressum extends React.Component {
         <p align="center">
           Die Urheberrechte für diese Seite hält Thomas Ströder. Das Kopieren von Inhalten dieser Seite ist nur in ihrem ursprünglichen Zustand gestattet. Jegliche Veränderungen von Inhalten dieser Seite und deren Weitergabe sind untersagt. Name und Logo des Gesangsquartett Cantemus sind Eigentum der Familie Ströder.
           <br /><br /><br /><br />
-          <img src={logo} class="borderedimage" alt="" />
+          <Logo />
         </p>
         <br /><br />
         Bei technischen Problemen oder Störungen senden Sie bitte eine Mail an den <a href='mailto:cryingshadow@web.de'>Administrator</a>.

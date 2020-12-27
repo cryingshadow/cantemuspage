@@ -3,6 +3,7 @@ import {Nav, Navbar} from 'react-bootstrap';
 
 export default class Navigation extends React.Component {
   render() {
+    const navigationComponents = this.props.routes.map(r => <Nav.Link href={r.path}>{r.name}</Nav.Link>);
     return (
       <Navbar expand="lg">
         <Navbar.Brand href="/">
@@ -11,7 +12,7 @@ export default class Navigation extends React.Component {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            {this.props.routes.map(r => <Nav.Link href={r.path}>{r.name}</Nav.Link>)}
+            {navigationComponents}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

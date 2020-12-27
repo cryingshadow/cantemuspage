@@ -13,13 +13,14 @@ const routes = [
 ];
 
 function App() {
+  const routeComponents = routes.map(r => <Route exact={r.exact} component={r.component} path={r.path} />);
   return (
     <div className="App">
       <BrowserRouter>
         <div>
           <Navigation routes={routes}/>
           <Switch>
-            {routes.map(r => <Route exact={r.exact} component={r.component} path={r.path} />)}
+            {routeComponents}
             <Route component={Page404} />
           </Switch>
         </div>
