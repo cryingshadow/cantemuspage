@@ -11,8 +11,7 @@ export default class Navigation extends React.Component {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/impressum">Impressum</Nav.Link>
+            {this.props.routes.map(r => <Nav.Link href={r.path}>{r.name}</Nav.Link>)}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

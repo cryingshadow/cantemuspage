@@ -1,20 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-import { Link, Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Navigation from './components/Navigation.js';
 import Home from './components/Home.js';
 import Impressum from './components/Impressum.js';
+import Disclaimer from './components/Disclaimer.js';
 import Page404 from './components/Page404.js';
+
+const routes = [
+  {name: "Home", exact: true, component: Home, path: "/"},
+  {name: "Impressum", exact: true, component: Impressum, path: "/impressum"},
+  {name: "Disclaimer", exact: true, component: Disclaimer, path: "/disclaimer"}
+];
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <div>
-          <Navigation />
+          <Navigation routes={routes}/>
           <Switch>
-            <Route exact={true} component={Home} path="/" />
-            <Route component={Impressum} path="/impressum" />
+            {routes.map(r => <Route exact={r.exact} component={r.component} path={r.path} />)}
             <Route component={Page404} />
           </Switch>
         </div>
