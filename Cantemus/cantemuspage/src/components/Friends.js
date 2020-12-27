@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from './Logo.js';
 
 export default class Friends extends React.Component {
   render() {

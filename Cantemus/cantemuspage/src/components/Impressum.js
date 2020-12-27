@@ -1,3 +1,4 @@
+import './Impressum.css';
 import React from 'react';
 import Logo from './Logo.js';
 
@@ -7,21 +8,49 @@ export default class Impressum extends React.Component {
       <div className="Impressum">
         <h1>Impressum</h1>
         <p>
-          <b>Diese Seite wurde erstellt am: </b>27. Dezember 2020<br />
-          <b>Letzte Änderung: </b>TODO<br />
-          <b>Programmierung und Design: </b>Thomas Ströder<br />
+          <table>
+            <tr>
+              <th>Diese Seite wurde erstellt am:</th>
+              <td>27. Dezember 2020</td>
+            </tr>
+            <tr>
+              <th>Letzte Änderung:</th>
+              <td>TODO</td>
+            </tr>
+            <tr>
+              <th>Programmierung und Design:</th>
+              <td>Thomas Ströder</td>
+            </tr>
+          </table>
         </p>
         <p>
-          <b>Anschrift: </b><br />Familie Ströder<br />Amselweg 13<br />53937 Schleiden<br />Tel.: 02445/7998
+          <table>
+            <tr>
+              <th>Anschrift:</th>
+            </tr>
+            <tr>
+              <td>Familie Ströder</td>
+            </tr>
+            <tr>
+              <td>Amselweg 13</td>
+            </tr>
+            <tr>
+              <td>53937 Schleiden</td>
+            </tr>
+            <tr>
+              <td>Tel.: 02445/7998</td>
+            </tr>
+          </table>
         </p>
-        <br />
         <p align="center">
           Die Urheberrechte für diese Seite hält Thomas Ströder. Das Kopieren von Inhalten dieser Seite ist nur in ihrem ursprünglichen Zustand gestattet. Jegliche Veränderungen von Inhalten dieser Seite und deren Weitergabe sind untersagt. Name und Logo des Gesangsquartett Cantemus sind Eigentum der Familie Ströder.
-          <br /><br /><br /><br />
+        </p>
+        <p align="center">
           <Logo />
         </p>
-        <br /><br />
-        Bei technischen Problemen oder Störungen senden Sie bitte eine Mail an den <a href='mailto:cryingshadow@web.de'>Administrator</a>.
+        <p>
+          Bei technischen Problemen oder Störungen senden Sie bitte eine Mail an den <a href='mailto:cryingshadow@web.de'>Administrator</a>.
+        </p>
       </div>
     );
   }

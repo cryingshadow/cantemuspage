@@ -1,3 +1,4 @@
+import './Home.css';
 import React from 'react';
 import Logo from './Logo.js';
 
@@ -9,12 +10,13 @@ export default class Home extends React.Component {
         <p align="center">
           <Logo />
         </p>
-        <br /><br /><br />
-        <p align="center">
+        <p align="center" id="afterlogo">
           Über die Navigationsleiste im oberen Teil der Homepage können Sie die verschiedenen Informationen unserer Homepage abrufen.
-          <br /><br />
+        </p>
+        <p align="center">
           Hinter der Rubrik <a href="/quartett">Quartett</a> verbirgt sich eine kleine Beschreibung von uns und unserem Gesangsquartett.
-          <br />
+        </p>
+        <p align="center">
           Unter der Rubrik <a href="/repertoire">Repertoire</a> finden Sie eine kurze Zusammenfassung unseres musikalischen Angebotes, sowie einige Hörbeispiele.
         </p>
       </div>
