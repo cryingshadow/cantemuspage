@@ -1,10 +1,11 @@
 import './Disclaimer.css';
 import React from 'react';
+import Page from './Page.js';
 
 export default class Disclaimer extends React.Component {
   render() {
     return (
-      <div className="Disclaimer">
+      <Page className="Disclaimer">
         <h1>Disclaimer<br />- Haftungsausschluss für das Webangebot des Vocalensembles Cantemus</h1>
         <h2>Inhalt des Webangebotes</h2>
         <p>
@@ -80,7 +81,7 @@ export default class Disclaimer extends React.Component {
         <p>
           In case of any uncertainties which arise due to errors in translation, the German version of this disclaimer is the legally binding one.
         </p>
-      </div>
+      </Page>
     );
   }
 }

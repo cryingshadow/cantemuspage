@@ -1,3 +1,8 @@
 .App {
   padding-top: 6em;
 }
+
+.responsivePicture {
+  max-width: 100%;
+  height: auto;
+}

@@ -7,7 +7,7 @@ export default class BorderedPicture extends React.Component {
     const pic = this.props.picture;
     const altText = this.props.altText;
     return (
-      <img src={pic} className="borderedimage" alt={altText} />
+      <img src={pic} className="borderedimage responsivePicture" alt={altText} />
     );
   }
 }

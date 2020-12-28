@@ -1,13 +1,22 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Page from './Page.js';
 
 export default class Repertoire extends React.Component {
   render() {
+    const samples = [
+      {fileName: "audite.mp3", displayName: "Audite Silete"},
+      {fileName: "alleraug.mp3", displayName: "Aller Augen"},
+      {fileName: "wirfdein.mp3", displayName: "Wirf dein Anliegen"},
+      {fileName: "exultate.mp3", displayName: "Live: Exultate justi"},
+      {fileName: "cantate.mp3", displayName: "Live: Cantate Domino"}
+    ];
+    const downloads = samples.map(sample => <li><Link to={sample.fileName} target="_blank" download>{sample.displayName}</Link></li>);
     return (
-      <div className="Repertoire">
+      <Page className="Repertoire">
         <h1>Repertoire</h1>
         <p>
-          Unser Repertoire reicht von der Renaissance bis in die Moderne. Genauso umfasst es auch Stücke in verschiedenen Sprachen.
+          Unser Repertoire reicht von der Renaissance bis in die Gegenwart. Genauso umfasst es auch Stücke in verschiedenen Sprachen und Stilrichtungen.
         </p>
         <p>
           Wir singen unter anderem:
@@ -22,15 +31,13 @@ export default class Repertoire extends React.Component {
             <li>eigene Arrangements aus verschiedensten Stilepochen&nbsp;&nbsp;&nbsp;u.v.m.</li>
           </ul>
         </p>
-        <h3>Hörbeispiele:</h3>
+        <h3>Hörbeispiele</h3>
         <ul>
-          <li><Link to="audite.mp3" target="_blank" download>Audite Silete</Link></li>
-          <li><Link to="alleraug.mp3" target="_blank" download>Aller Augen</Link></li>
-          <li><Link to="wirfdein.mp3" target="_blank" download>Wirf dein Anliegen</Link></li>
-          <li><Link to="exultate.mp3" target="_blank" download>Live: Exultate justi</Link></li>
-          <li><Link to="cantate.mp3" target="_blank" download>Live: Cantate Domino</Link></li>
+          {downloads}
         </ul>
-      </div>
+        <h3>Videos</h3>
+        <Link to="https://www.youtube.com/channel/UCiFWsz4hmZeP_j3PN4FZuSw" target="_blank" rel="noreferrer">Link zu unserem YouTube Kanal</Link>
+      </Page>
     );
   }
 }

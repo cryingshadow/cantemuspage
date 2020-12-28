@@ -1,4 +1,5 @@
 import React from 'react';
+import Page from './Page.js';
 import BorderedPicture from './BorderedPicture.js';
 import family1 from '../images/family.jpg';
 import family2 from '../images/family2.jpg';
@@ -6,14 +7,13 @@ import family2 from '../images/family2.jpg';
 export default class Quartett extends React.Component {
   render() {
     return (
-      <div className="Quartett">
+      <Page className="Quartett">
         <h1>Wir stellen uns vor</h1>
         <p align="center">
-          <img src={family1} alt="Cantemus"/>
+          <img src={family1} alt="Cantemus" className="responsivePicture" />
         </p>
         <p align="center">
-          Das Gesangsquartett Cantemus wurde im Jahr 2003 gegründet und besteht aus der vierköpfigen Musikerfamilie Ströder:<br />
-          Judith (Sopran), Gabi (Alt), Thomas (Tenor) und Heinz (Bass).
+          Das Gesangsquartett Cantemus wurde im Jahr 2003 gegründet und besteht aus der vierköpfigen Musikerfamilie Judith Scherer (Sopran, geb. Ströder), Gabi Ströder (Alt), Thomas Ströder (Tenor) und Heinz Ströder (Bass).
         </p>
         <p align="center">
           Schon lange vor Gründung dieses Quartetts haben wir viel gemeinsam in den unterschiedlichsten Stilrichtungen und Gruppierungen musiziert. Besonders hat uns aber der Gesang Freude gemacht und so haben wir begonnen, ein kleines Repertoire für uns vier einzustudieren.
@@ -38,7 +38,7 @@ export default class Quartett extends React.Component {
         <p align="center">
           <BorderedPicture picture={family2} altText="Cantemus" />
         </p>
-      </div>
+      </Page>
     );
   }
 }
