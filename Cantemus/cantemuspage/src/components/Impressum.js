@@ -12,7 +12,7 @@ export default class Impressum extends React.Component {
           <table>
             <tr>
               <th>Diese Seite wurde erstellt am:</th>
-              <td>28. Dezember 2020</td>
+              <td>06. Februar 2006</td>
             </tr>
             <tr>
               <th>Letzte Änderung:</th>

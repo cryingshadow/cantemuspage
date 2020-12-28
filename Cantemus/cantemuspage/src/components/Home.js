@@ -22,7 +22,7 @@ export default class Home extends React.Component {
           Über die Menüsteuerung im oberen Teil diser Seite können Sie die verschiedenen Informationen unserer Webseite abrufen.
         </p>
         <p align="center">
-          Hinter der Rubrik <a href="/quartett">Quartett</a> verbirgt sich eine kleine Beschreibung von uns und unserem Gesangsquartett. Gleichermaßen finden Sie Beschreibungen unserer erweiterten Ensembles Cantemus and <a href="/friends">Friends</a> sowie Cantemus and <a href="/more">More</a>.
+          Hinter der Rubrik <a href="/quartett">Quartett</a> verbirgt sich eine kleine Beschreibung von uns und unserem Gesangsquartett. Gleichermaßen finden Sie eine Beschreibung unseres erweiterten Ensembles Cantemus and <a href="/friends">Friends</a>.
         </p>
         <p align="center">
           Unter der Rubrik <a href="/repertoire">Repertoire</a> finden Sie eine kurze Zusammenfassung unseres musikalischen Angebotes sowie einige Hörbeispiele.
