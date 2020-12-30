@@ -20,7 +20,9 @@ export default class Navigation extends React.Component {
     const navigationComponents = this.props.routes.map(route => <NavigationButton name={route.name} action={() => this.navigate(route.name)} />);
     return (
       <div className="Navigation">
-        <NavigationButton name="Cantemus" action={() => this.navigate("Home")} />
+        <div className="NavigationHome">
+          <NavigationButton name="Cantemus" action={() => this.navigate("Home")} />
+        </div>
         <div className={menuClass}>
           {navigationComponents}
         </div>
