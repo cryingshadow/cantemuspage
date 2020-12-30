@@ -31,8 +31,6 @@ export default class Quartett extends React.Component {
           Unsere musikalische Tätigkeit erstreckt sich regional auf Schleiden in der Eifel und seine Umgebung. Ob im Schleidener Wintergarten, im Gemünder Kurhaus oder im Kloster "Maria Wald", wir singen gerne an jedem Ort und zu jeder Gelegenheit.
         </p>
         <p align="center">
-          {//Um mit uns Kontakt aufzunehmen, können Sie unser <a href="kontakt.htm" target="main">Kontakt</a>formular benutzen.
-          }
           Unsere Anschrift finden Sie im <a href="/impressum">Impressum</a>.
         </p>
         <p align="center">

@@ -1,0 +1,20 @@
+.TextButton {
+  color: silver;
+  background-color: black;
+  border: none;
+  padding: 0px;
+  outline: none;
+}
+
+.TextButton:hover {
+  color: silver;
+  text-decoration: underline;
+}
+
+.TextButton:active {
+  outline: none;
+}
+
+.TextButton:focus {
+  outline: none;
+}

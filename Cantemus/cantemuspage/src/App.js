@@ -35,7 +35,7 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <Navigation routes={routes} navigate={(selection) => this.navigate(selection)}/>
-        <MainComponent />
+        <MainComponent navigate={(selection) => this.navigate(selection)} />
       </div>
     );
   }
