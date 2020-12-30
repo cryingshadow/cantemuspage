@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default class NavigationButton extends React.Component {
   render() {
     return (
-      <button onClick={() => this.props.action()}>
+      <button onClick={this.props.action} className="NavigationButton">
         {this.props.name}
       </button>
     );

@@ -3,7 +3,7 @@
   src: local('Caveat'), url(../fonts/Caveat-VariableFont_wght.ttf) format('truetype');
 }
 
-button {
+.NavigationButton {
   color: white;
   font-family: Caveat;
   font-size: 200%;
@@ -13,14 +13,14 @@ button {
   outline: none;
 }
 
-button:hover {
+.NavigationButton:hover {
   color: silver;
 }
 
-button:active {
+.NavigationButton:active {
   outline: none;
 }
 
-button:focus {
+.NavigationButton:focus {
   outline: none;
 }

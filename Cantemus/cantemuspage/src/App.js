@@ -8,7 +8,6 @@ import Friends from './components/Friends.js';
 import Repertoire from './components/Repertoire.js';
 import Impressum from './components/Impressum.js';
 import Disclaimer from './components/Disclaimer.js';
-//import Page404 from './components/Page404.js';
 
 const routes = [
   {name: "Quartett", exact: true, component: Quartett, path: "/quartett"},
@@ -19,23 +18,23 @@ const routes = [
   {name: "Disclaimer", exact: true, component: Disclaimer, path: "/disclaimer"}
 ];
 
-function navigate(self, selection) {
-  self.setState({mainPage: selection});
-}
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {mainPage: "Home"};
   }
   
+  navigate(selection) {
+    this.setState({mainPage: selection});
+  }
+
   render() {
     const selectedPage = this.state.mainPage;
     const filteredRoutes = routes.filter(route => route.name === selectedPage);
     const MainComponent = filteredRoutes.length > 0 ? filteredRoutes[0].component : Home;
     return (
       <div className="App">
-        <Navigation routes={routes} navigate={(selection) => navigate(this, selection)}/>
+        <Navigation routes={routes} navigate={(selection) => this.navigate(selection)}/>
         <MainComponent />
       </div>
     );
