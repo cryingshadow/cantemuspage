@@ -4,9 +4,10 @@
   border-bottom-style: solid;
   background-color: black;
   margin-bottom: 1em;
-  /*border-color: white;
-  border-width: 1px;
-  border-style: solid;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .nav-menu {
