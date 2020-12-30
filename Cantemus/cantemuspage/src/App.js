@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Navigation from './components/Navigation.js';
 import Home from './components/Home.js';
@@ -19,22 +20,22 @@ const routes = [
   {name: "Disclaimer", exact: true, component: Disclaimer, path: "/disclaimer"}
 ];
 
-function App() {
-  const routeComponents = routes.map(r => <Route exact={r.exact} component={r.component} path={r.path} />);
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <div>
-          <Navigation routes={routes}/>
-          <Switch>
-            <Route exact component={Home} path="/" />
-            {routeComponents}
-            <Route component={Page404} />
-          </Switch>
-        </div>
-      </BrowserRouter>
-    </div>
-  );
+export default class App extends React.Component {
+  render() {
+    const routeComponents = routes.map(r => <Route exact={r.exact} component={r.component} path={r.path} />);
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <div>
+            <Navigation routes={routes}/>
+            <Switch>
+              <Route exact component={Home} path="/" />
+              {routeComponents}
+              <Route component={Page404} />
+            </Switch>
+          </div>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
-
-export default App;
