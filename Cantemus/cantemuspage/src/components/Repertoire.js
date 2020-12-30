@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import Page from './Page.js';
 
 export default class Repertoire extends React.Component {
@@ -11,7 +10,7 @@ export default class Repertoire extends React.Component {
       {fileName: "exultate.mp3", displayName: "Live: Exultate justi"},
       {fileName: "cantate.mp3", displayName: "Live: Cantate Domino"}
     ];
-    const downloads = samples.map(sample => <li><Link to={sample.fileName} target="_blank" download>{sample.displayName}</Link></li>);
+    const downloads = samples.map(sample => <li><a href={sample.fileName} target="_blank" rel="noreferrer" download>{sample.displayName}</a></li>);
     return (
       <Page className="Repertoire">
         <h1>Repertoire</h1>

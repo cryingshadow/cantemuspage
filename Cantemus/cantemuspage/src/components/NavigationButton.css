@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Caveat';
+  src: local('Caveat'), url(../fonts/Caveat-VariableFont_wght.ttf) format('truetype');
+}
+
+button {
+  color: white;
+  font-family: Caveat;
+  font-size: 200%;
+  background-color: black;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+button:hover {
+  color: silver;
+}
+
+button:active {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}

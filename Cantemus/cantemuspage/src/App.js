@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Navigation from './components/Navigation.js';
 import Home from './components/Home.js';
 import Quartett from './components/Quartett.js';
@@ -9,7 +8,7 @@ import Friends from './components/Friends.js';
 import Repertoire from './components/Repertoire.js';
 import Impressum from './components/Impressum.js';
 import Disclaimer from './components/Disclaimer.js';
-import Page404 from './components/Page404.js';
+//import Page404 from './components/Page404.js';
 
 const routes = [
   {name: "Quartett", exact: true, component: Quartett, path: "/quartett"},
@@ -20,21 +19,24 @@ const routes = [
   {name: "Disclaimer", exact: true, component: Disclaimer, path: "/disclaimer"}
 ];
 
+function navigate(self, selection) {
+  self.setState({mainPage: selection});
+}
+
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {mainPage: "Home"};
+  }
+  
   render() {
-    const routeComponents = routes.map(r => <Route exact={r.exact} component={r.component} path={r.path} />);
+    const selectedPage = this.state.mainPage;
+    const filteredRoutes = routes.filter(route => route.name === selectedPage);
+    const MainComponent = filteredRoutes.length > 0 ? filteredRoutes[0].component : Home;
     return (
       <div className="App">
-        <BrowserRouter>
-          <div>
-            <Navigation routes={routes}/>
-            <Switch>
-              <Route exact component={Home} path="/" />
-              {routeComponents}
-              <Route component={Page404} />
-            </Switch>
-          </div>
-        </BrowserRouter>
+        <Navigation routes={routes} navigate={(selection) => navigate(this, selection)}/>
+        <MainComponent />
       </div>
     );
   }
