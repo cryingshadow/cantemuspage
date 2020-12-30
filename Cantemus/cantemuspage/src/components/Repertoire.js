@@ -36,7 +36,7 @@ export default class Repertoire extends React.Component {
           {downloads}
         </ul>
         <h3>Videos</h3>
-        <Link to="https://www.youtube.com/channel/UCiFWsz4hmZeP_j3PN4FZuSw" target="_blank" rel="noreferrer">Link zu unserem YouTube Kanal</Link>
+        <a href="https://www.youtube.com/channel/UCiFWsz4hmZeP_j3PN4FZuSw" target="_blank" rel="noreferrer">Link zu unserem YouTube Kanal</a>
       </Page>
     );
   }
