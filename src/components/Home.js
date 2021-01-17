@@ -4,6 +4,7 @@ import Page from './Page.js';
 import News from './News.js';
 import Logo from './Logo.js';
 import TextButton from './TextButton.js';
+import PropTypes from 'prop-types';
 
 export default class Home extends React.Component {
   render() {
@@ -45,3 +46,7 @@ export default class Home extends React.Component {
     );
   }
 }
+
+Home.propTypes = {
+  navigate: PropTypes.func.isRequired
+};

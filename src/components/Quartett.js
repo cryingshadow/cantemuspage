@@ -3,9 +3,12 @@ import Page from './Page.js';
 import BorderedPicture from './BorderedPicture.js';
 import family1 from '../images/family.jpg';
 import family2 from '../images/family2.jpg';
+import TextButton from './TextButton.js';
+import PropTypes from 'prop-types';
 
 export default class Quartett extends React.Component {
   render() {
+    const navigate = this.props.navigate;
     return (
       <Page className="Quartett">
         <h1>Wir stellen uns vor</h1>
@@ -25,13 +28,13 @@ export default class Quartett extends React.Component {
           Singen ist für uns eine besonders reizvolle Form der Musik, da kein Instrument so facettenreich ist, wie die menschliche Stimme. Der Gesang mit mehreren Stimmen, sowohl a-capella als auch mit instrumentaler Begleitung, ist eine der vielseitigsten musikalischen Ausdrucksformen.
         </p>
         <p align="center">
-          Diese Vielseitigkeit wollen wir auch nutzen, und so besteht unser Repertoire aus Stücken der verschiedensten Zeit- und Stilepochen von alten Madrigalen bis hin zu moderner Pop-Musik. Auch ein paar eigene Bearbeitungen und Kompositionen finden sich in unserem <a href="/repertoire">Repertoire</a>.
+          Diese Vielseitigkeit wollen wir auch nutzen, und so besteht unser Repertoire aus Stücken der verschiedensten Zeit- und Stilepochen von alten Madrigalen bis hin zu moderner Pop-Musik. Auch ein paar eigene Bearbeitungen und Kompositionen finden sich in unserem <TextButton name="Repertoire" action={() => navigate("Repertoire")} />.
         </p>
         <p align="center">
           Unsere musikalische Tätigkeit erstreckt sich regional auf Schleiden in der Eifel und seine Umgebung. Ob im Schleidener Wintergarten, im Gemünder Kurhaus oder im Kloster "Maria Wald", wir singen gerne an jedem Ort und zu jeder Gelegenheit.
         </p>
         <p align="center">
-          Unsere Anschrift finden Sie im <a href="/impressum">Impressum</a>.
+          Unsere Anschrift finden Sie im <TextButton name="Impressum" action={() => navigate("Impressum")} />.
         </p>
         <p align="center">
           <BorderedPicture picture={family2} altText="Cantemus" />
@@ -40,3 +43,7 @@ export default class Quartett extends React.Component {
     );
   }
 }
+
+Quartett.propTypes = {
+  navigate: PropTypes.func.isRequired
+};
