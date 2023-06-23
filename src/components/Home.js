@@ -1,7 +1,6 @@
 import './Home.css';
 import React from 'react';
 import Page from './Page.js';
-import News from './News.js';
 import Logo from './Logo.js';
 import TextButton from './TextButton.js';
 import PropTypes from 'prop-types';
@@ -10,6 +9,7 @@ export default class Home extends React.Component {
   render() {
     const navigate = this.props.navigate;
     const links = [
+      {url: "https://www.youtube.com/channel/UCiFWsz4hmZeP_j3PN4FZuSw", name: "https://www.youtube.com/channel/UCiFWsz4hmZeP_j3PN4FZuSw", description: "Unser YouTube-Kanal"},
       {url: "http://www.cvnrw.de", name: "www.cvnrw.de", description: "ChorVerband NRW"},
       {url: "http://www.gdg-hellenthal-schleiden.de", name: "www.gdg-hellenthal-schleiden.de", description: "Gemeinde der Gemeinden Hellenthal-Schleiden"},
       {url: "http://www.schleiden.de", name: "www.schleiden.de", description: "Stadt Schleiden"}
@@ -36,7 +36,6 @@ export default class Home extends React.Component {
         <p align="center">
           Sie befinden sich hier auf der Startseite, auf der Sie aktuelle Informationen und Links zu anderen mit uns in Verbindung stehenden Seiten finden.
         </p>
-        <News />
         <h2>Links</h2>
         <ul className="linklist">
           {linkItems}
